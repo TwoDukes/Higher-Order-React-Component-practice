@@ -5,6 +5,18 @@ import history from '../../../utils/history';
 export default (ComposedComponent) => {
   class Authentication extends Component {
 
+    componentWillMount(){
+      if(!this.props.authenticated){
+        history.replace('/');
+      }
+    }
+
+    componentWillUpdate(nextProps){
+      if(!nextProps.authenticated){
+        history.replace('/');
+      }
+    }
+
     render(){
       return <ComposedComponent {...this.props} />
     }

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import history from '../utils/history';
 import { 
-  BrowserRouter as Router,
+  Router,
   Route
  } from 'react-router-dom';
 
